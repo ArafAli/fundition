@@ -1,0 +1,20 @@
+<head>
+  <title>fundition.org</title>
+</head>
+
+<body>
+</body>
+
+<template name="mainlayout">
+    {{>topbar}}
+
+    <article>
+        {{> yield}}
+      </article>
+
+    <!-- {{> leftsidebar "lside"}}
+    
+    {{> rightsidebar "rside"}} -->
+
+    {{> footer "footer"}}
+  </template>

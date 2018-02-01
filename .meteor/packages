@@ -22,3 +22,5 @@ semantic:ui
 juliancwirko:postcss
 less
 jquery
+frozeman:persistent-minimongo2
+iron:router
