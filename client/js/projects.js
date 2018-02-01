@@ -2,7 +2,7 @@ import moment from 'moment'
 import xss from 'xss'
 
 Projects = new Mongo.Collection(null)
-projectsObserver = new PersistentMinimongo2(Projects, 'projects');
+//projectsObserver = new PersistentMinimongo2(Projects, 'projects');
 
 
 Projects.getTrendingProjects = function (type, limit, cb) {
@@ -15,11 +15,7 @@ Projects.getTrendingProjects = function (type, limit, cb) {
         if (result) {
             for (var i = 0; i < result.length; i++) {
                 console.log(result[i]);
-                try {
-                    Projects.upsert({ _id: result[i]._id }, result[i])
-                } catch (err) {
-                    //cb(err)
-                }
+                Projects.upsert({ _id: result[i].id }, result[i])
             }
         }
         else {

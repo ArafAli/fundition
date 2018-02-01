@@ -1,31 +1,30 @@
 Router.route('/', function () {
-    this.layout('mainlayout');
-    this.render('home');
-    
-  });
+  this.layout('mainlayout');
+  this.render('home');
+});
 
-  Router.route('/login', function () {
-    this.layout('mainlayout');
-    this.render('login');
-  });
+Router.route('/login', function () {
+  this.layout('mainlayout');
+  this.render('login');
+});
 
-  Router.route('/explore', function () {
-    this.layout('mainlayout');
-    this.render('explore');
-    Projects.getTrendingProjects();
-  });
+Router.route('/explore', function () {
+  this.layout('mainlayout');
+  this.render('explore');
+  Projects.getTrendingProjects();
+});
 
-  Router.route('/newproject', function () {
-    this.layout('mainlayout');
-    this.render('newproject');
-  });
+Router.route('/newproject', function () {
+  this.layout('mainlayout');
+  this.render('newproject');
+});
 
-  Router.route('/myprojects', function () {
-    this.layout('mainlayout');
-    this.render('myprojects');
-  });
+Router.route('/myprojects', function () {
+  this.layout('mainlayout');
+  this.render('myprojects');
+});
 
-  Router.route('/learnmore', function () {
-    this.layout('mainlayout');
-    this.render('learnmore');
-  });
+Router.route('/learnmore', function () {
+  this.layout('mainlayout');
+  this.render('learnmore');
+});
