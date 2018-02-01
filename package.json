@@ -6,9 +6,13 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.0.0-beta.39",
+    "buffer": "^5.0.8",
+    "bufferutil": "^3.0.3",
     "meteor-node-stubs": "^0.3.2",
     "moment": "^2.20.1",
+    "steem": "^0.7.1",
     "steemjs": "^1.0.4",
+    "utf-8-validate": "^4.0.0",
     "xss": "^0.3.7"
   },
   "devDependencies": {

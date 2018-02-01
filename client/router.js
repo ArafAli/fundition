@@ -1,9 +1,3 @@
-Router.route('/index.html', function () {
-  this.layout('mainlayout');
-  this.render('home');
-  
-});
-
 Router.route('/', function () {
     this.layout('mainlayout');
     this.render('home');
@@ -18,6 +12,7 @@ Router.route('/', function () {
   Router.route('/explore', function () {
     this.layout('mainlayout');
     this.render('explore');
+    Projects.getTrendingProjects();
   });
 
   Router.route('/newproject', function () {
