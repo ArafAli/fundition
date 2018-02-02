@@ -10,8 +10,9 @@ Router.route('/login', function () {
 
 Router.route('/explore', function () {
   this.layout('mainlayout');
-  this.render('explore');
   Projects.getTrendingProjects();
+  this.render('explore');
+
 });
 
 Router.route('/newproject', function () {

@@ -9,6 +9,6 @@ Template.explore.helpers({
   }
 })
 
-Template.explore.rendered = function () {
+// Template.explore.rendered = function () {
 
-}
+// }

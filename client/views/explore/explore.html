@@ -1,9 +1,17 @@
 <template name="explore">
-  <div class="ui infinite">
     <div class="ui container">
-      <h2>EXPLORE</h2>
-      {{> article trendingProjects}}
-      <div class="ui large inline loader" style="float: right;right: 0px;"></div>
+      <div class="ui internally celled grid">
+        <div class="row">
+            <div class="ten wide column">
+                <h2>EXPLORE</h2>
+                <!-- {{> article trendingProjects}} -->
+                {{> homecarousel trendingProjects}}
+              </div>
+          <div class="six wide column">
+              <h2>You may have crush for these projects</h2>
+          </div>
+
+        </div>
+      </div>
     </div>
-  </div>
 </template>
