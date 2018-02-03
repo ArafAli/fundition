@@ -6,7 +6,6 @@ Template.homecarousel.rendered = function () {
 
 
 Template.homecarousel.onRendered(function() {
-
     $('.carousel').owlCarousel({
         loop: true,
         nav: false,

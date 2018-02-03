@@ -10,7 +10,7 @@ window.steem = steem;
 import sc2sdk from 'sc2-sdk';
 var sc2 = sc2sdk.Initialize({
     app: 'fundition.app',
-    callbackURL: 'https://localhost:3000',
+    callbackURL: 'http://localhost:3000/sc2login',
     accessToken: 'access_token'
 });
 window.sc2 = sc2
@@ -18,4 +18,3 @@ window.sc2 = sc2
 import './main.html';
 
 
-Projects.getTrendingProjects();

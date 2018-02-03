@@ -5,3 +5,4 @@ Template.registerHelper('imgFromBody', function (string) {
         return string.split('(https://steemitimages.com/').pop().split(')').shift();
     }
   })
+

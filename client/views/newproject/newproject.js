@@ -1,16 +1,43 @@
+
+Template.newproject.helpers({
+    onBasics: function () {
+        if(Session.get('currentStep') === "basics")
+        return true
+    },
+    onRewards: function () {
+        if(Session.get('currentStep') === "rewards")
+        return true
+    },
+    onAccount: function () {
+        if(Session.get('currentStep') === "account")
+        return true
+    },
+    onStory: function () {
+        if(Session.get('currentStep') === "story")
+        return true
+    },
+    onPreview: function () {
+        if(Session.get('currentStep') === "preview")
+        return true
+    },
+    onConfirmProject: function () {
+        if(Session.get('currentStep') === "confirmproject")
+        return true
+    }
+  })
+  
+
 Template.newproject.rendered = function () {
-    $('.ui.dropdown')
-    .dropdown();
+    Session.set('currentStep','basics')
 }
-
-
 
 Template.newproject.events({
 'click #submitproject': function (event) {
     event.preventDefault()
-    var form = document.getElementById('projectform')
+    var form = document.getElementById('basicsform')
     var project = Template.newproject.createNewProject(form)
-    console.log(project)
+    sessionStorage.setItem('project', project);
+    console.log( sessionStorage.getItem('project'))
   }
 })
 

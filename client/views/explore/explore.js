@@ -1,9 +1,4 @@
 Template.explore.helpers({
-  isOnMobile: function () {
-    if (/Mobi/.test(navigator.userAgent)) {
-      return true;
-    }
-  },
   trendingProjects: function () {
     if (Projects.find().fetch()) return Projects.find().fetch()
   },
@@ -19,7 +14,3 @@ Template.explore.helpers({
 
 Template.explore.rendered = function () {
 }
-
-Template.explore.onRendered(function() {
-
-});

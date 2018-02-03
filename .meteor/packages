@@ -24,3 +24,4 @@ less
 jquery
 frozeman:persistent-minimongo2
 clinical:router
+session

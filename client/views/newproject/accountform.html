@@ -1,0 +1,53 @@
+<template name="accountform">
+        <h2>Account informations</h2>
+        <form id="projectform" class="ui form">
+            <div class="field">
+                <div class="ui selection dropdown">
+                    <input type="hidden" name="gender">
+                    <i class="dropdown icon"></i>
+                    <div class="default text">Choose a category</div>
+                    <div class="menu">
+                        <div class="item" data-value="1">Art</div>
+                        <div class="item" data-value="0">Games</div>
+                    </div>
+                </div>
+            </div>
+            <div class="field">
+                <label>Give your project a title :</label>
+                <input type="text" name="title" placeholder="Project title">
+            </div>
+            <div class="field">
+                <label>Short description :</label>
+                <input type="text" name="short_desc" placeholder="Short Description">
+            </div>
+            <div class="field">
+                <label>Choose an image for your project :</label>
+                <input type="text" name="image" placeholder="Project image">
+            </div>
+            <div class="field">
+                <label>Project Location :</label>
+                <input type="text" name="location" placeholder="Project location">
+            </div>
+            <div class="field">
+                <label>Funding Duration :</label>
+                <input type="text" name="duration" placeholder="Funding Duration">
+                <label>End on (Date - Time) :</label>
+                <input type="text" name="ending" placeholder="Funding Duration">
+            </div>
+            <div class="field">
+                <label>Funding goal :</label>
+                <input type="text" name="goal" placeholder="Funding Duration">
+            </div>
+            <div class="field">
+                <label>Project collaborators :</label>
+                <input type="text" name="collaborators" placeholder="Funding Duration">
+            </div>
+            <div class="field">
+                <div class="ui checkbox">
+                    <input type="checkbox" tabindex="0" class="hidden">
+                    <label>I agree to the Terms and Conditions</label>
+                </div>
+            </div>
+            <button id="submitproject" class="ui button" type="submit">Submit</button>
+        </form>
+    </template>
