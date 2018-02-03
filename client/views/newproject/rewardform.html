@@ -1,0 +1,18 @@
+<template name="rewardform">
+    <h2>Set Rewards</h2>
+    <div class="ui stackable grid">
+        <div class="six wide column">
+            <span>Reward #1 :</span>
+            <p></p>
+            <label>0 backers</label>
+        </div>
+        <div class="ten wide column">
+            <form id="rewardsform" class="ui form">
+                {{> rewards}} {{#each reward}} {{> rewards}} {{/each}}
+            </form>
+        </div>
+        <div class="row">
+            <a id="addreward" class="ui fluid large blue inverted button">Add Reward</a>
+        </div>
+    </div>
+</template>
