@@ -1,12 +1,24 @@
 var carousel = require('owl.carousel')
- 
+
 Template.homecarousel.rendered = function () {
-    $(".owl-carousel").owlCarousel({
-      loop: true,
-      margin: 2,
-      nav: true,
-      responsiveBaseElement: document.getElementsByClassName('ui container'),
-      navText: [ '', '' ],
-      animateOut: 'slideOutDown'
-    });
+    // console.log("first")
+    // $('.carousel').owlCarousel('destroy');
+    // $('.carousel').owlCarousel({
+    //     loop: true,
+    //     nav: false,
+    //     items: 1,
+    //     singleItem: true
+    // });
 }
+
+
+Template.homecarousel.onRendered(function() {
+    console.log("sec")
+    $('.carousel').owlCarousel('destroy');
+    $('.carousel').owlCarousel({
+        loop: true,
+        nav: false,
+        items: 1,
+        singleItem: true
+    });
+});

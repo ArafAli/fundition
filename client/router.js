@@ -1,3 +1,7 @@
+Router.configure({
+  layoutTemplate: 'mainlayout'
+});
+
 Router.route('/', function () {
   this.layout('mainlayout');
   this.render('home');
@@ -6,13 +10,6 @@ Router.route('/', function () {
 Router.route('/login', function () {
   this.layout('mainlayout');
   this.render('login');
-});
-
-Router.route('/explore', function () {
-  this.layout('mainlayout');
-  Projects.getTrendingProjects();
-  this.render('explore');
-
 });
 
 Router.route('/newproject', function () {
@@ -28,4 +25,19 @@ Router.route('/myprojects', function () {
 Router.route('/learnmore', function () {
   this.layout('mainlayout');
   this.render('learnmore');
+});
+
+Router.route('/sc2', function () {
+  this.layout('mainlayout');
+  this.render('home');
+});
+
+Router.route('/explore', function () {
+  this.layout('mainlayout');
+  this.render('explore');
+});
+
+Router.route('/explore/:tag', function () {
+  this.layout('mainlayout');
+  this.render('explore');
 });

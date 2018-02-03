@@ -1,0 +1,11 @@
+<template name="topTags">
+        <div class="ui fluid row" style="margin-top: 10px;margin-bottom: 10px;overflow: hidden;max-height: 40px;overflow-y: -webkit-paged-x;">
+                {{#each this}} {{>tags}} {{/each}}
+        </div>
+</template>
+
+<template name="tags">
+        <a class="item" href="/explore/{{name}}">
+                <a class="ui button basic black">{{name}}</a>
+        </a>
+</template>

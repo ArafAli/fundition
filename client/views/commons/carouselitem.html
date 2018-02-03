@@ -1,0 +1,14 @@
+<template name="carouselitem">
+    <div class='ui card segment item fluid' style="height:500px;">
+        <!-- <img src="https://steemitimages.com/{{imgFromBody body}}" width="100%" height="100%" alt="{{title}}" style="object-fit: cover;"> -->
+        <div class="ui green massive label" style="position:absolute;bottom: 80px;right: 20px;left: 20px;border-radius: 5px!important;">
+            <span class="ui black label" style=" text-transform: uppercase;">Category : {{category}}</span>
+            <h2 style="margin-bottom:5px;margin-top:5px;">{{title}}</h2>
+            <h4 style="margin-top:0px;">by {{author}}</h4>
+            <div class="ui blue progress" data-percent="5" id="example1" style=" border: white 2px solid;background:  white;">
+                <div class="bar"></div>
+                <div class="label" style="color:white">5% Funded</div>
+            </div>
+        </div>
+    </div>
+</template>

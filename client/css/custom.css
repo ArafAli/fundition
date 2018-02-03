@@ -1,0 +1,6 @@
+.owl-item{
+    float: left;
+}
+.owl-nav.disabled{
+    display: none;
+}

@@ -1,16 +1,17 @@
 <template name="topbar">
-  <div class="ui blue inverted vertical masthead center aligned segment" style="background-image:url('images/topbanner.jpg');height:460px;">
+  <div class="ui blue inverted vertical masthead center aligned segment" style="background-image:url('images/topbanner.jpg');">
     <div class="ui  segment container" style="padding:0px">
         <a class="item" href="/" style="float: left;width: 10em;background: white; border-radius: 5px; padding: 10px;">
           <img src="images/fundition.svg">
         </a>
       <div class="ui large  menu" style="border: none;box-shadow: none;    margin-top: 0px;">
-        <a class="item" href="/">Home</a>
+        <!-- <a class="item" href="/">Home</a> -->
         <a class="item" href="/explore">Explore</a>
         <a class="item" href="/newproject">Start a project</a>
         <a class="item" href="/learnmore">Learn more</a>
         <div class="right item">
-          <a class="ui blue inverted button" href="/login">Log in</a>
+            <a class="ui black button" href="/myfundition">My fundition</a>
+          <a id="loginbutton" class="ui blue inverted button" href="/login">Log in</a>
           <a class="ui blue inverted button" href="https://steemit.com/pick_account" target="_blank" style="margin-left:5px;">Sign Up</a>
         </div>
       </div>
@@ -23,9 +24,5 @@
         <i class="right arrow icon"></i>
       </div>
     </div>
-  </div>
-  <div class="ui container">
-    <h1 class="ui blue header" style="text-align: center;padding:20px;">Entrepreneurs, artists, designers, and other creators find the resources they need to make their ideas a reality over
-      Steem Blockchain.</h1>
   </div>
 </template>
