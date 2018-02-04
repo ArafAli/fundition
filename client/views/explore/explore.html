@@ -8,7 +8,13 @@
                 <div class="ten wide column">
                     <h2>EXPLORE ALL CATEGORIES</h2>
                     <!-- {{> article trendingProjects}} -->
-                    {{> homecarousel trendingProjects}}
+                    <div class="carousel owl-carousel owl-theme" style="overflow: hidden;">
+                        {{#if isLoaded}}
+                        {{#each trendingProjects}}
+                        {{>carouselitem}}
+                        {{/each}}
+                        {{/if}}
+                    </div>
                 </div>
                 <div class="six wide column">
                     <h2>You may have crush for these projects</h2>

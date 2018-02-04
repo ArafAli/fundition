@@ -5,7 +5,6 @@ Router.configure({
 Router.route('/', function () {
   this.layout('mainlayout');
   this.render('home');
-  Projects.getTrendingProjects();
 });
 
 Router.route('/login', function () {
@@ -41,11 +40,10 @@ Router.route('/sc2login', function () {
   Router.go('/myfundition')
 });
 
-
-
 Router.route('/explore', function () {
   this.layout('mainlayout');
   this.render('explore');
+  Projects.getTrendingProjects();
 });
 
 Router.route('/explore/:tag', function () {

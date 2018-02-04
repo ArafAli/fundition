@@ -1,6 +1,5 @@
 Template.explore.rendered = function () {
-    $('#basicsform')
-    .form({
+    $('#basicsform').form({
       fields: {
         category     : 'empty',
         title   : 'empty',

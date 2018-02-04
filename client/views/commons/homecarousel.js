@@ -4,7 +4,6 @@ Template.homecarousel.rendered = function () {
     $('.carousel').owlCarousel('destroy');
 }
 
-
 Template.homecarousel.onRendered(function() {
     $('.carousel').owlCarousel({
         loop: true,

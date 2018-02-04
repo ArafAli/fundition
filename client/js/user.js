@@ -14,3 +14,4 @@ User.getUser = function (username) {
     }
   })
 }
+

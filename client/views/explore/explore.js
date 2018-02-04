@@ -1,16 +1,25 @@
+var carousel = require('owl.carousel')
+
 Template.explore.helpers({
   trendingProjects: function () {
-    if (Projects.find().fetch()) return Projects.find().fetch()
+    return Projects.find().fetch()
   },
   trendingTags: function () {
-    if (TrendingTags.find().fetch().length) return TrendingTags.find().fetch()
-    else {
-      TrendingTags.getTrendingTags();
-    }
     return TrendingTags.find().fetch()
+  },
+  isLoaded: function () {
+    return Session.get('loaded')
   }
-
 })
 
 Template.explore.rendered = function () {
+  $('.carousel').owlCarousel('destroy');
+  Session.set('loaded', true)
+  $('.carousel').owlCarousel({
+    loop: true,
+    nav: false,
+    items: 1,
+    singleItem: true
+  });
 }
+

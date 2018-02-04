@@ -5,6 +5,7 @@ Projects = new Mongo.Collection(null)
 //projectsObserver = new PersistentMinimongo2(Projects, 'projects');
 
 Projects.getTrendingProjects = function (cb) {
+  if(Projects.find().fetch().length > 0) return
   var query = {
     tag: 'fr',
     limit: 10
@@ -21,9 +22,7 @@ Projects.getTrendingProjects = function (cb) {
   });
 }
 
-
 Projects.getProjectsByUser = function (user , cb) {
-  console.log(user)
   var query = {
     tag: user,
     limit: 200
@@ -32,7 +31,7 @@ Projects.getProjectsByUser = function (user , cb) {
     if (result) {
       for (var i = 0; i < result.length; i++) {
         console.log(result[i])
-        Projects.upsert({ _id: result[i].id, type: 'trending' }, result[i], )
+        Projects.upsert({ _id: result[i].id, type: 'myproject' }, result[i], )
       }
     }
     else {
