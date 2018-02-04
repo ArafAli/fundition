@@ -14,6 +14,14 @@ Template.basicsform.rendered = function () {
   ;
 }
 
+Template.basicsform.events({
+  'click #submitproject': function (event) {
+      event.preventDefault()
+      var form = document.getElementById('basicsform')
+      var project = Template.newproject.createNewProject(form)
+    }
+  })
+
 Template.basicsform.createBasicsForm = function (form) {
   var project = {
     basics: {
