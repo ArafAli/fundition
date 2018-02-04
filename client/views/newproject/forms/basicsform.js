@@ -1,4 +1,4 @@
-Template.explore.rendered = function () {
+Template.basicsform.rendered = function () {
     $('#basicsform').form({
       fields: {
         category     : 'empty',
@@ -12,4 +12,20 @@ Template.explore.rendered = function () {
       }
     })
   ;
+}
+
+Template.basicsform.createBasicsForm = function (form) {
+  var project = {
+    basics: {
+      category:form.category.value,
+      title: form.title.value,
+      description: form.short_desc.value,
+      image:form.image.value,
+      duration: form.duration.value,
+      ending: form.ending.value,
+      goal: form.goal.value,
+      type: form.type.value
+    }
+    //add it to session
+  }
 }

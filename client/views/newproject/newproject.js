@@ -1,4 +1,3 @@
-
 Template.newproject.helpers({
     onBasics: function () {
         if(Session.get('currentStep') === "basics")
